@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package underscore
+ * @package astral
  */
 
 get_header();
@@ -84,6 +84,7 @@ $args2 = array(
   while ( $query2->have_posts() ) {
       $query2->the_post();
       echo '<h2>' . get_the_title( $query2->post->ID ) . '</h2>';
+      the_post_thumbnail();
   }
   
 //  // Restore original Post Data
